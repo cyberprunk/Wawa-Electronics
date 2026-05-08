@@ -27,9 +27,25 @@
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
       <div class="nav-actions">
-        <button class="nav-icon" aria-label="Search">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        </button>
+        <div class="search-hover-zone" id="searchHoverZone">
+          <button class="nav-icon" aria-label="Search" id="searchTrigger">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+          <div class="search-dropdown" id="searchOverlay">
+            <div class="sd-input-row">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <input type="text" id="searchInput" class="sd-input" placeholder="Search products…" autocomplete="off" spellcheck="false"/>
+              <button class="sd-clear" id="searchClear" aria-label="Clear">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </button>
+            </div>
+            <div class="sd-meta" id="searchMeta"></div>
+            <div class="sd-results" id="searchResultsGrid"></div>
+            <div class="sd-empty" id="searchEmpty" style="display:none">
+              <span>No results for "<b id="searchEmptyTerm"></b>"</span>
+            </div>
+          </div>
+        </div>
         <button class="hamburger" id="hamburger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
@@ -204,5 +220,6 @@
 
   <script src="products-data.js"></script>
   <script src="category.js"></script>
+  <script src="search.js"></script>
 </body>
 </html>

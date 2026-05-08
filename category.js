@@ -18,6 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initModals();
   initEnquiryForm();
+
+  // Auto-open a product if ?open=productId is in the URL
+  const openId = new URLSearchParams(window.location.search).get('open');
+  if (openId) {
+    const target = data.products.find(p => p.id === openId);
+    if (target) setTimeout(() => openDetailModal(openId, data.products), 400);
+  }
 });
 
 // ---- Page Init ----

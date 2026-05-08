@@ -67,7 +67,9 @@ function closeModal() {
 
 modalClose.addEventListener('click', closeModal);
 modalOverlay.addEventListener('click', e => { if (e.target === modalOverlay) closeModal(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
 
 // ---- Form submission (demo) ----
 function handleFormSubmit(form, successMsg) {
@@ -102,6 +104,117 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
+});
+
+// ---- Search dropdown (hover) ----
+const CAT_LABELS = {
+  phones:'Phones', laptops:'Laptops', headphones:'Headphones',
+  airpods:'AirPods', speakers:'Speakers', televisions:'Televisions',
+  fridges:'Fridges', cookers:'Cookers', cutlery:'Cutlery & Kitchen',
+  appliances:'Home Appliances'
+};
+
+const searchHoverZone = document.getElementById('searchHoverZone');
+const searchDropdown  = document.getElementById('searchOverlay');
+const searchInput     = document.getElementById('searchInput');
+const searchClear     = document.getElementById('searchClear');
+const searchGrid      = document.getElementById('searchResultsGrid');
+const searchMeta      = document.getElementById('searchMeta');
+const searchEmpty     = document.getElementById('searchEmpty');
+const searchEmptyTerm = document.getElementById('searchEmptyTerm');
+
+let sdLeaveTimer = null;
+
+function openSearch() {
+  clearTimeout(sdLeaveTimer);
+  searchDropdown.classList.add('open');
+  setTimeout(() => searchInput.focus(), 60);
+}
+
+function closeSearch() {
+  searchDropdown.classList.remove('open');
+  searchInput.value = '';
+  renderSearch('');
+}
+
+function getAllProducts() {
+  if (typeof WAWA_DATA === 'undefined') return [];
+  const out = [];
+  Object.entries(WAWA_DATA).forEach(([slug, cat]) => {
+    cat.products.forEach(p => out.push({ ...p, catSlug: slug, catLabel: CAT_LABELS[slug] || slug }));
+  });
+  return out;
+}
+
+function searchProducts(q) {
+  if (!q.trim()) return [];
+  const ql = q.toLowerCase();
+  return getAllProducts().filter(p =>
+    p.name.toLowerCase().includes(ql) ||
+    p.brand.toLowerCase().includes(ql) ||
+    p.description.toLowerCase().includes(ql) ||
+    (p.catLabel || '').toLowerCase().includes(ql) ||
+    p.features.some(f => f.toLowerCase().includes(ql))
+  );
+}
+
+function escH(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function hilite(text, q) {
+  if (!q.trim()) return escH(text);
+  const re = new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi');
+  return escH(text).replace(re,'<mark style="background:rgba(201,168,76,0.35);color:#fff;border-radius:2px;padding:0 1px">$1</mark>');
+}
+
+function renderSearch(query) {
+  if (!query.trim()) {
+    searchMeta.textContent = '';
+    searchGrid.innerHTML = '';
+    searchEmpty.style.display = 'none';
+    return;
+  }
+  const results = searchProducts(query);
+  searchMeta.textContent = results.length
+    ? `${results.length} result${results.length !== 1 ? 's' : ''}`
+    : '';
+
+  if (!results.length) {
+    searchGrid.innerHTML = '';
+    searchEmpty.style.display = 'block';
+    searchEmptyTerm.textContent = query;
+    return;
+  }
+  searchEmpty.style.display = 'none';
+
+  searchGrid.innerHTML = results.slice(0, 6).map(p => `
+    <a class="search-result-card" href="category.html?cat=${p.catSlug}&open=${p.id}">
+      <div class="sr-img-wrap">
+        <img src="${p.image}" alt="${escH(p.name)}" class="sr-img"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="sr-fallback" style="display:none;${p.gradient?`background:${p.gradient}`:'background:#111'}">${p.emoji||'📦'}</div>
+        <span class="sr-cat-tag">${escH(p.catLabel)}</span>
+      </div>
+      <div class="sr-info">
+        <div class="sr-brand">${escH(p.brand)}</div>
+        <div class="sr-name">${hilite(p.name, query)}</div>
+      </div>
+      <svg class="sr-arrow" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+    </a>
+  `).join('');
+}
+
+searchHoverZone.addEventListener('mouseenter', openSearch);
+searchHoverZone.addEventListener('mouseleave', () => {
+  sdLeaveTimer = setTimeout(closeSearch, 200);
+});
+
+searchInput.addEventListener('input', () => renderSearch(searchInput.value));
+searchClear.addEventListener('click', () => { searchInput.value = ''; renderSearch(''); searchInput.focus(); });
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && searchDropdown.classList.contains('open')) closeSearch();
+  if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); openSearch(); }
 });
 
 // ---- Parallax subtle on hero ----
