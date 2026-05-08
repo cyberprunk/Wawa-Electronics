@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WaWa Electronics – Premium Tech at Voice Mall</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header id="navbar">
+    <nav class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-wawa">WaWa</span>
+        <span class="logo-electronics">Electronics</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#brands">Brands</a></li>
+        <li><a href="#featured">Products</a></li>
+        <li><a href="#delivery">Delivery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-icon" aria-label="Search">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="nav-icon" aria-label="Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#categories">Categories</a>
+      <a href="#brands">Brands</a>
+      <a href="#featured">Products</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-video-wrap">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="brand_assets/mixkit-woman-takes-her-headphones-to-listen-to-music-51134-full-hd.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Premium Electronics Store</p>
+      <h1 class="hero-headline reveal">
+        Experience <span class="gold">Luxury</span><br/>Tech Like Never Before
+      </h1>
+      <p class="hero-sub reveal">
+        The finest brands. The latest tech. All under one roof<br/>at Voice Mall, Bwebajja  Entebbe Road, Kampala.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#categories" class="btn btn-primary">Shop Now</a>
+        <a href="#contact" class="btn btn-outline">Visit Us</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE BRANDS ===== -->
+  <section class="brands-bar" id="brands">
+    <div class="marquee-track">
+      <div class="marquee-inner">
+        <span class="brand-chip">LG</span>
+        <span class="brand-chip">Samsung</span>
+        <span class="brand-chip">Hisense</span>
+        <span class="brand-chip">TCL</span>
+        <span class="brand-chip">Aiwa</span>
+        <span class="brand-chip">Geepas</span>
+        <span class="brand-chip">JBL</span>
+        <span class="brand-chip">iPhone</span>
+        <span class="brand-chip">Techno</span>
+        <!-- duplicate for seamless loop -->
+        <span class="brand-chip">LG</span>
+        <span class="brand-chip">Samsung</span>
+        <span class="brand-chip">Hisense</span>
+        <span class="brand-chip">TCL</span>
+        <span class="brand-chip">Aiwa</span>
+        <span class="brand-chip">Geepas</span>
+        <span class="brand-chip">JBL</span>
+        <span class="brand-chip">iPhone</span>
+        <span class="brand-chip">Techno</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TAGLINE STRIP ===== -->
+  <section class="tagline-strip">
+    <div class="container">
+      <p class="tagline-text reveal">
+        Where <span class="gold">premium technology</span> meets everyday living — phones, TVs, fridges, laptops and more, all from the world's most trusted brands.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORIES ===== -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Explore</p>
+        <h2 class="section-title">Shop by Category</h2>
+      </div>
+      <div class="categories-grid">
+
+        <a href="category.html?cat=phones" class="cat-card reveal" style="--delay:0s">
+          <div class="cat-icon">📱</div>
+          <div class="cat-bg" style="background:linear-gradient(135deg,rgba(26,26,46,0.65),rgba(22,33,62,0.75)),url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=400&q=80') center/cover"></div>
+          <div class="cat-content">
+            <h3>Phones</h3>
+            <p>iPhone · Techno · Samsung</p>
+          </div>
+          <div class="cat-hover-line"></div>
+        </a>
+
+        <a href="category.html?cat=laptops" class="cat-card reveal" style="--delay:0.05s">
+          <div class="cat-icon">💻</div>
+          <div class="cat-bg" style="background:linear-gradient(135deg,rgba(26,42,26,0.65),rgba(22,33,22,0.75)),url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=400&q=80') center/cover"></div>
+          <div class="cat-content">
+            <h3>Laptops</h3>
+            <p>Work · Gaming · Ultrabooks</p>
+          </div>
+          <div class="cat-hover-line"></div>
+        </a>
+
+        <a href="category.html?cat=headphones" class="cat-card reveal" style="--delay:0.1s">
+          <div class="cat-icon">🎧</div>
+          <div class="cat-bg" style="background:linear-gradient(135deg,rgba(42,26,46,0.6),rgba(26,10,32,0.72)),url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80') center/cover"></div>
+          <div class="cat-content">
+            <h3>Headphones</h3>
+            <p>JBL · Aiwa · Sony</p>
+          </div>
+          <div class="cat-hover-line"></div>
+        </a>
+
+        <a href="category.html?cat=airpods" class="cat-card reveal" style="--delay:0.15s">
+          <div class="cat-icon">🎵</div>
+          <div class="cat-bg" style="background:linear-gradient(135deg,rgba(42,26,14,0.62),rgba(26,14,0,0.75)),url('https://images.unsplash.com/photo-1585386959836-5df27a00f541?auto=format&fit=crop&w=400&q=80') center/cover"></div>
+          <div class="cat-content">
+            <h3>AirPods</h3>
+            <p>True Wireless · Noise Cancel</p>
+          </div>
+          <div class="cat-hover-line"></div>
+        </a>
+
+        <a href="category.html?cat=speakers" class="cat-card reveal" style="--delay:0.2s">
+          <div class="cat-icon">🔊</div>
+          <div class="cat-bg" style="background:linear-gradient(135deg,rgba(14,26,42,0.6),rgba(0,14,26,0.75)),url('https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=400&q=80') center/cover"></div>
+          <div class="cat-content">
+            <h3>Speakers</h3>
+            <p>JBL · Aiwa · Bluetooth</p>
+          </div>
+          <div class="cat-hover-line"></div>
+        </a>
+
+        <a href="category.html?cat=televisions" class="cat-card reveal" style="--delay:0.25s">
+          <div class="cat-icon">📺</div>
+          <div class="cat-bg" style="background:linear-gradient(135deg,rgba(26,14,14,0.6),rgba(42,0,0,0.75)),url('https://images.unsplash.com/photo-1593359677879-a4021f55b2f9?auto=format&fit=crop&w=400&q=80') center/cover"></div>
+          <div class="cat-content">
+            <h3>Televisions</h3>
+            <p>Samsung · LG · Hisense · TCL</p>
+          </div>
+          <div class="cat-hover-line"></div>
+        </a>
+
+        <a href="category.html?cat=fridges" class="cat-card reveal" style="--delay:0.3s">
+          <div class="cat-icon">❄️</div>
+          <div class="cat-bg" style="background:linear-gradient(135deg,rgba(10,26,42,0.62),rgba(5,21,32,0.75)),url('https://images.unsplash.com/photo-1571171755545-71b0a13b8f3e?auto=format&fit=crop&w=400&q=80') center/cover"></div>
+          <div class="cat-content">
+            <h3>Fridges</h3>
+            <p>LG · Samsung · Hisense</p>
+          </div>
+          <div class="cat-hover-line"></div>
+        </a>
+
+        <a href="category.html?cat=cookers" class="cat-card reveal" style="--delay:0.35s">
+          <div class="cat-icon">🍳</div>
+          <div class="cat-bg" style="background:linear-gradient(135deg,rgba(26,16,10,0.6),rgba(42,21,0,0.75)),url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=400&q=80') center/cover"></div>
+          <div class="cat-content">
+            <h3>Cookers</h3>
+            <p>Gas · Electric · Induction</p>
+          </div>
+          <div class="cat-hover-line"></div>
+        </a>
+
+        <a href="category.html?cat=cutlery" class="cat-card reveal" style="--delay:0.4s">
+          <div class="cat-icon">🍽️</div>
+          <div class="cat-bg" style="background:linear-gradient(135deg,rgba(26,26,10,0.62),rgba(37,37,0,0.75)),url('https://images.unsplash.com/photo-1591489378430-ef2f4c626b35?auto=format&fit=crop&w=400&q=80') center/cover"></div>
+          <div class="cat-content">
+            <h3>Cutlery & Kitchen</h3>
+            <p>Geepas · Premium Sets</p>
+          </div>
+          <div class="cat-hover-line"></div>
+        </a>
+
+        <a href="category.html?cat=appliances" class="cat-card reveal" style="--delay:0.45s">
+          <div class="cat-icon">🏠</div>
+          <div class="cat-bg" style="background:linear-gradient(135deg,rgba(26,10,26,0.62),rgba(32,0,32,0.75)),url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=80') center/cover"></div>
+          <div class="cat-content">
+            <h3>Home Appliances</h3>
+            <p>Washing Machines · Microwaves</p>
+          </div>
+          <div class="cat-hover-line"></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PRODUCTS ===== -->
+  <section class="featured" id="featured">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Best Sellers</p>
+        <h2 class="section-title">Featured Products</h2>
+      </div>
+      <div class="products-grid">
+
+        <div class="product-card reveal" style="--delay:0s">
+          <div class="product-badge">Hot</div>
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1593359677879-a4021f55b2f9?auto=format&fit=crop&w=600&q=80" alt="Samsung QLED TV" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-placeholder" style="display:none;background:linear-gradient(135deg,#1a1a2e,#0d0d1a)"><span class="product-emoji">📺</span></div>
+          </div>
+          <div class="product-info">
+            <span class="product-brand">Samsung</span>
+            <h4 class="product-name">QLED 4K Smart TV 55"</h4>
+            <p class="product-desc">Crystal-clear 4K display, built-in streaming, HDR</p>
+            <div class="product-footer">
+              <span class="product-price">Contact for Price</span>
+              <button class="btn-enquire">Enquire</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal" style="--delay:0.08s">
+          <div class="product-badge new">New</div>
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="iPhone 16 Pro Max" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-placeholder" style="display:none;background:linear-gradient(135deg,#0d1a0d,#0a2a0a)"><span class="product-emoji">📱</span></div>
+          </div>
+          <div class="product-info">
+            <span class="product-brand">iPhone</span>
+            <h4 class="product-name">iPhone 16 Pro Max</h4>
+            <p class="product-desc">A18 Pro chip, titanium design, ProCamera system</p>
+            <div class="product-footer">
+              <span class="product-price">Contact for Price</span>
+              <button class="btn-enquire">Enquire</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal" style="--delay:0.16s">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="JBL Headphones" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-placeholder" style="display:none;background:linear-gradient(135deg,#1a0d1a,#2a0a2a)"><span class="product-emoji">🎧</span></div>
+          </div>
+          <div class="product-info">
+            <span class="product-brand">JBL</span>
+            <h4 class="product-name">Live 770NC Headphones</h4>
+            <p class="product-desc">Adaptive noise cancelling, 65hr battery life</p>
+            <div class="product-footer">
+              <span class="product-price">Contact for Price</span>
+              <button class="btn-enquire">Enquire</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal" style="--delay:0.24s">
+          <div class="product-badge">Popular</div>
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1571171755545-71b0a13b8f3e?auto=format&fit=crop&w=600&q=80" alt="LG Fridge" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-placeholder" style="display:none;background:linear-gradient(135deg,#1a0a00,#2a1500)"><span class="product-emoji">❄️</span></div>
+          </div>
+          <div class="product-info">
+            <span class="product-brand">LG</span>
+            <h4 class="product-name">InstaView French Door Fridge</h4>
+            <p class="product-desc">Knock twice to see inside without opening the door</p>
+            <div class="product-footer">
+              <span class="product-price">Contact for Price</span>
+              <button class="btn-enquire">Enquire</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal" style="--delay:0.32s">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80" alt="Samsung Laptop" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-placeholder" style="display:none;background:linear-gradient(135deg,#0a0a1a,#151530)"><span class="product-emoji">💻</span></div>
+          </div>
+          <div class="product-info">
+            <span class="product-brand">Samsung</span>
+            <h4 class="product-name">Galaxy Book4 Pro</h4>
+            <p class="product-desc">Intel Core Ultra, AMOLED display, ultra-slim design</p>
+            <div class="product-footer">
+              <span class="product-price">Contact for Price</span>
+              <button class="btn-enquire">Enquire</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal" style="--delay:0.4s">
+          <div class="product-badge new">New</div>
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80" alt="JBL Speaker" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-placeholder" style="display:none;background:linear-gradient(135deg,#001a0a,#002a15)"><span class="product-emoji">🔊</span></div>
+          </div>
+          <div class="product-info">
+            <span class="product-brand">JBL</span>
+            <h4 class="product-name">PartyBox 310 Speaker</h4>
+            <p class="product-desc">240W powerful sound, light show, splash-proof</p>
+            <div class="product-footer">
+              <span class="product-price">Contact for Price</span>
+              <button class="btn-enquire">Enquire</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section class="why-us">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Our Promise</p>
+        <h2 class="section-title">Why Shop at WaWa?</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal" style="--delay:0s">
+          <div class="why-icon">✦</div>
+          <h3>Genuine Products</h3>
+          <p>Every item we sell is 100% authentic, sourced directly from authorized brand distributors.</p>
+        </div>
+        <div class="why-card reveal" style="--delay:0.1s">
+          <div class="why-icon">✦</div>
+          <h3>Best Brands</h3>
+          <p>LG, Samsung, Hisense, TCL, Aiwa, Geepas, JBL, iPhone, Techno — the world's finest in one store.</p>
+        </div>
+        <div class="why-card reveal" style="--delay:0.2s">
+          <div class="why-icon">✦</div>
+          <h3>City-Wide Delivery</h3>
+          <p>We deliver to your doorstep anywhere in Kampala and beyond. Fast, safe, and reliable.</p>
+        </div>
+        <div class="why-card reveal" style="--delay:0.3s">
+          <div class="why-icon">✦</div>
+          <h3>Expert Advice</h3>
+          <p>Our knowledgeable staff help you find exactly what you need, at the right budget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DELIVERY ===== -->
+  <section class="delivery" id="delivery">
+    <div class="delivery-inner">
+      <div class="delivery-content reveal">
+        <p class="section-eyebrow">Convenience First</p>
+        <h2>We Deliver To<br/><span class="gold">Your Doorstep</span></h2>
+        <p class="delivery-desc">
+          Can't make it to Voice Mall? No problem. WaWa Electronics delivers across Kampala and surrounding areas. Just call us, place your order, and we'll bring your dream tech right to you.
+        </p>
+        <a href="#contact" class="btn btn-primary">Order Now</a>
+      </div>
+      <div class="delivery-visual reveal">
+        <div class="delivery-card">
+          <div class="delivery-step">
+            <div class="step-num">01</div>
+            <div>
+              <h4>Browse & Choose</h4>
+              <p>Call or visit to pick your product</p>
+            </div>
+          </div>
+          <div class="delivery-step">
+            <div class="step-num">02</div>
+            <div>
+              <h4>Confirm Order</h4>
+              <p>We confirm availability and price</p>
+            </div>
+          </div>
+          <div class="delivery-step">
+            <div class="step-num">03</div>
+            <div>
+              <h4>Fast Delivery</h4>
+              <p>Your order arrives at your door</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BRANDS SHOWCASE ===== -->
+  <section class="brands-showcase" id="brands-detail">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Trusted Names</p>
+        <h2 class="section-title">Our Brand Partners</h2>
+      </div>
+      <div class="brands-grid">
+        <div class="brand-card reveal" style="--delay:0s">
+          <img src="https://logo.clearbit.com/lg.com" alt="LG" class="brand-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="brand-name-lg" style="display:none">LG</span>
+        </div>
+        <div class="brand-card reveal" style="--delay:0.05s">
+          <img src="https://logo.clearbit.com/samsung.com" alt="Samsung" class="brand-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="brand-name-lg" style="display:none">Samsung</span>
+        </div>
+        <div class="brand-card reveal" style="--delay:0.1s">
+          <img src="https://logo.clearbit.com/hisense.com" alt="Hisense" class="brand-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="brand-name-lg" style="display:none">Hisense</span>
+        </div>
+        <div class="brand-card reveal" style="--delay:0.15s">
+          <img src="https://logo.clearbit.com/tcl.com" alt="TCL" class="brand-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="brand-name-lg" style="display:none">TCL</span>
+        </div>
+        <div class="brand-card reveal" style="--delay:0.2s">
+          <img src="https://logo.clearbit.com/aiwa.com" alt="Aiwa" class="brand-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="brand-name-lg" style="display:none">Aiwa</span>
+        </div>
+        <div class="brand-card reveal" style="--delay:0.25s">
+          <img src="https://logo.clearbit.com/geepas.com" alt="Geepas" class="brand-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="brand-name-lg" style="display:none">Geepas</span>
+        </div>
+        <div class="brand-card reveal" style="--delay:0.3s">
+          <img src="https://logo.clearbit.com/jbl.com" alt="JBL" class="brand-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="brand-name-lg" style="display:none">JBL</span>
+        </div>
+        <div class="brand-card reveal" style="--delay:0.35s">
+          <img src="https://logo.clearbit.com/apple.com" alt="iPhone" class="brand-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="brand-name-lg" style="display:none">iPhone</span>
+        </div>
+        <div class="brand-card reveal" style="--delay:0.4s">
+          <img src="https://logo.clearbit.com/tecno-mobile.com" alt="Techno" class="brand-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="brand-name-lg" style="display:none">Techno</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / LOCATION ===== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Find Us</p>
+        <h2 class="section-title">Visit or Get in Touch</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-block">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Our Location</h4>
+              <p>Voice Mall, Bwebajja<br/>Entebbe Road, Kampala, Uganda</p>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <h4>Opening Hours</h4>
+              <p>Monday – Saturday: 8:00 AM – 8:00 PM<br/>Sunday: 10:00 AM – 6:00 PM</p>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Call / WhatsApp</h4>
+              <p>+256 700 000 000</p>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon">📦</div>
+            <div>
+              <h4>Deliveries</h4>
+              <p>Kampala & surrounding areas<br/>Same-day delivery available</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm">
+            <h3>Send an Enquiry</h3>
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Phone / WhatsApp Number" required />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Product you're interested in" />
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your message..." rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width">Send Enquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAP PLACEHOLDER ===== -->
+  <div class="map-bar">
+    <div class="map-placeholder">
+      <div class="map-pin-anim">
+        <div class="map-pin"></div>
+        <div class="map-ripple"></div>
+      </div>
+      <p>Voice Mall, Bwebajja — Entebbe Road, Kampala</p>
+      <a href="https://maps.google.com/?q=Bwebajja+Voice+Mall+Entebbe+Road+Kampala" target="_blank" class="btn btn-outline sm">Open in Google Maps</a>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo footer-logo">
+              <span class="logo-wawa">WaWa</span>
+              <span class="logo-electronics">Electronics</span>
+            </div>
+            <p>Your luxury electronics destination at Voice Mall, Bwebajja on Entebbe Road. Premium brands, genuine products, fast delivery.</p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="WhatsApp">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Categories</h5>
+            <ul>
+              <li><a href="#categories">Phones</a></li>
+              <li><a href="#categories">Laptops</a></li>
+              <li><a href="#categories">Headphones</a></li>
+              <li><a href="#categories">Televisions</a></li>
+              <li><a href="#categories">Fridges</a></li>
+              <li><a href="#categories">Cookers</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Brands</h5>
+            <ul>
+              <li><a href="#brands-detail">Samsung</a></li>
+              <li><a href="#brands-detail">LG</a></li>
+              <li><a href="#brands-detail">Hisense</a></li>
+              <li><a href="#brands-detail">JBL</a></li>
+              <li><a href="#brands-detail">iPhone</a></li>
+              <li><a href="#brands-detail">Techno</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#featured">Featured</a></li>
+              <li><a href="#delivery">Delivery</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 WaWa Electronics. All rights reserved. Voice Mall, Bwebajja, Entebbe Road, Kampala.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== ENQUIRY MODAL ===== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h3>Product Enquiry</h3>
+      <p id="modalProductName"></p>
+      <form class="contact-form" id="modalForm">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="Phone / WhatsApp" required />
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Any specific requirements?" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width">Send Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

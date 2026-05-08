@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WaWa Electronics – Category</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="category.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header id="navbar" class="scrolled">
+    <nav class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-wawa">WaWa</span>
+        <span class="logo-electronics">Electronics</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#categories">Categories</a></li>
+        <li><a href="index.html#brands">Brands</a></li>
+        <li><a href="index.html#featured">Products</a></li>
+        <li><a href="index.html#delivery">Delivery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-icon" aria-label="Search">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html#categories">Categories</a>
+      <a href="index.html#brands">Brands</a>
+      <a href="index.html#featured">Products</a>
+      <a href="index.html#delivery">Delivery</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- ===== CATEGORY HERO ===== -->
+  <section class="cat-hero" id="catHero">
+    <div class="cat-hero-bg" id="catHeroBg"></div>
+    <div class="cat-hero-overlay"></div>
+    <div class="cat-hero-content">
+      <nav class="breadcrumb" id="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="bc-sep">›</span>
+        <span id="bcCurrent">Category</span>
+      </nav>
+      <div class="cat-hero-emoji" id="catEmoji">📱</div>
+      <h1 class="cat-hero-title" id="catTitle">Category</h1>
+      <p class="cat-hero-sub" id="catSub">Subtitle</p>
+      <div class="cat-hero-count"><span id="productCount">0</span> products available</div>
+    </div>
+  </section>
+
+  <!-- ===== FILTERS ===== -->
+  <div class="filters-bar sticky-filters" id="filtersBar">
+    <div class="filters-inner">
+      <span class="filter-label">Filter by brand:</span>
+      <div class="filter-pills" id="filterPills"></div>
+      <div class="results-count" id="resultsCount"></div>
+    </div>
+  </div>
+
+  <!-- ===== PRODUCTS GRID ===== -->
+  <main class="cat-main">
+    <div class="container">
+      <div class="cat-products-grid" id="productsGrid"></div>
+      <div class="no-results" id="noResults" style="display:none">
+        <div class="no-results-emoji">🔍</div>
+        <h3>No products found</h3>
+        <p>Try selecting a different brand filter.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== PRODUCT DETAIL MODAL ===== -->
+  <div class="modal-overlay" id="detailModalOverlay">
+    <div class="detail-modal" id="detailModal">
+      <button class="modal-close" id="detailModalClose">&times;</button>
+      <div class="detail-modal-inner">
+        <div class="detail-img-side">
+          <img src="" alt="" id="detailImg" class="detail-img">
+          <div class="detail-img-fallback" id="detailImgFallback"></div>
+          <div class="detail-brand-row">
+            <img src="" alt="" id="detailBrandLogo" class="detail-brand-logo">
+            <span id="detailBrandName" class="detail-brand-text"></span>
+          </div>
+        </div>
+        <div class="detail-info-side">
+          <div class="detail-badge-wrap" id="detailBadgeWrap"></div>
+          <h2 class="detail-name" id="detailName"></h2>
+          <p class="detail-desc" id="detailDesc"></p>
+
+          <div class="detail-features" id="detailFeatures"></div>
+
+          <div class="detail-specs-section">
+            <h4 class="detail-specs-title">Specifications</h4>
+            <table class="specs-table" id="specsTable"></table>
+          </div>
+
+          <div class="detail-actions">
+            <a href="#" class="btn btn-primary" id="whatsappBtn" target="_blank">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              Enquire via WhatsApp
+            </a>
+            <button class="btn btn-outline" id="detailEnquireBtn">Send Enquiry Form</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ENQUIRY FORM MODAL ===== -->
+  <div class="modal-overlay" id="enquiryModalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="enquiryClose">&times;</button>
+      <h3>Product Enquiry</h3>
+      <p id="enquiryProductName" class="enquiry-product-name"></p>
+      <form class="contact-form" id="enquiryForm">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="Phone / WhatsApp Number" required />
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Any specific requirements?" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width">Send Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo footer-logo">
+              <span class="logo-wawa">WaWa</span>
+              <span class="logo-electronics">Electronics</span>
+            </div>
+            <p>Voice Mall, Bwebajja, Entebbe Road, Kampala. Premium brands, genuine products, fast delivery.</p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="WhatsApp">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Categories</h5>
+            <ul>
+              <li><a href="category.html?cat=phones">Phones</a></li>
+              <li><a href="category.html?cat=laptops">Laptops</a></li>
+              <li><a href="category.html?cat=headphones">Headphones</a></li>
+              <li><a href="category.html?cat=televisions">Televisions</a></li>
+              <li><a href="category.html?cat=fridges">Fridges</a></li>
+              <li><a href="category.html?cat=cookers">Cookers</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>More Categories</h5>
+            <ul>
+              <li><a href="category.html?cat=airpods">AirPods</a></li>
+              <li><a href="category.html?cat=speakers">Speakers</a></li>
+              <li><a href="category.html?cat=cutlery">Cutlery</a></li>
+              <li><a href="category.html?cat=appliances">Appliances</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Visit Us</h5>
+            <ul>
+              <li><a href="index.html#contact">📍 Voice Mall, Bwebajja</a></li>
+              <li><a href="index.html#contact">🕐 Mon–Sat 8am–8pm</a></li>
+              <li><a href="tel:+256700000000">📞 +256 700 000 000</a></li>
+              <li><a href="index.html#delivery">📦 Delivery available</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 WaWa Electronics. All rights reserved. Voice Mall, Bwebajja, Entebbe Road, Kampala.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products-data.js"></script>
+  <script src="category.js"></script>
+</body>
+</html>
